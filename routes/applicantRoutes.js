@@ -1,6 +1,10 @@
 const express = require("express");
 const cvUploadMiddleware = require("../middleware/cvUploadMiddleware");
-const { postApplicantDetails, getApplicantDetails, getApplicantDetailsByPosition } = require("../controllers/applicantController");
+const { 
+    postApplicantDetails, 
+    getApplicantDetails, 
+    getApplicantDetailsByPosition 
+} = require("../controllers/applicantController");
 const router = express.Router();
 
 router.post("/post-applicant-details", cvUploadMiddleware.uploadFile, postApplicantDetails);
